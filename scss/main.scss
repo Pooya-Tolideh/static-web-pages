@@ -7,6 +7,11 @@ $main-margin: 20px;
 %container_width { max-width: 400px; }
 %text_ctr{ text-align: center; }
 
+
+a { text-decoration: none; }
+li { list-style: none; }
+* { box-sizing: border-box; }
+
 .email-background {
     background: $basic-background;
     padding: 10px;
@@ -54,13 +59,37 @@ $main-margin: 20px;
             margin: $main-margin;
 
             a {
-                text-decoration: none;
                 background: $btn-color;
                 padding: 10px 20px;
                 display: inline-block;
                 color: $nutral-color;
                 border-radius: 5px; }
         }
+    }
+
+    .footer {
+        @extend .email-container;
+        @extend %text_ctr;
+        background: $basic-background;
+        margin-top: $main-margin;
+        margin-bottom: $main-margin/2;
+        padding-left: 0;
+
+        li {
+            display: inline-block;
+            padding: 0 $main-margin;
+            border-left: 1px solid $par-color*1.2;
+
+            a {
+                color: $par-color*1.7;
+                font-size: 12px;
+
+                &:hover {text-decoration: underline;}
+            }
+
+        }
+
+        li:first-child { border-left: none;}
     }
 }
 
