@@ -4,7 +4,7 @@ $par-color: #666;
 $btn-color: #3D87F5;
 $main-margin: 20px;
 
-%container_width { max-width: 500px; }
+%container_width { max-width: 245px; }
 %text_ctr{ text-align: center; }
 
 .email-background {
@@ -27,7 +27,7 @@ $main-margin: 20px;
 
         p {
             margin: $main-margin;
-            font-size: 18px;
+            font-size: 16px;
             @extend %text_ctr;
             color: $par-color;
             line-height: 1.5; }

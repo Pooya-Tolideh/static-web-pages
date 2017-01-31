@@ -1,5 +1,5 @@
 .email-background .email-preheader, .email-background .email-container {
-  max-width: 500px; }
+  max-width: 245px; }
 
 .email-background .email-container p, .email-background .email-container a, .email-background .email-container .cta {
   text-align: center; }
@@ -19,7 +19,7 @@
     border-radius: 5px; }
     .email-background .email-container p {
       margin: 20px;
-      font-size: 18px;
+      font-size: 16px;
       color: #666;
       line-height: 1.5; }
     .email-background .email-container a {
