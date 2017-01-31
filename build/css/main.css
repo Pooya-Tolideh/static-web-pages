@@ -1,5 +1,8 @@
-.email-background .email-preheader {
+.email-background .email-preheader, .email-background .email-container {
   max-width: 500px; }
+
+.email-background .email-container p {
+  text-align: center; }
 
 .email-background {
   background: #eee;
@@ -8,3 +11,14 @@
     background: #eee;
     color: #eee;
     font-size: 5px; }
+  .email-background .email-container {
+    background: #FFF;
+    font-family: sans-serif;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 5px; }
+    .email-background .email-container p {
+      margin: 20px;
+      font-size: 18px;
+      color: #666;
+      line-height: 1.5; }

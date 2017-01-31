@@ -4,6 +4,9 @@ $par-color: #666;
 $btn-color: #3D87F5;
 $main-margin: 20px;
 
+%container_width { max-width: 500px; }
+%text_ctr{ text-align: center;}
+
 .email-background {
     background: $basic-background;
     padding: 10px;
@@ -14,7 +17,21 @@ $main-margin: 20px;
         color: $basic-background;
         font-size: 5px;}
 
-}
+    .email-container {
+        @extend %container_width;
+        background: $nutral-color;
+        font-family: sans-serif;
+        margin: 0 auto;
+        overflow: hidden;
+        border-radius: 5px;
 
+        p {
+            margin: $main-margin;
+            font-size: 18px;
+            @extend %text_ctr;
+            color: $par-color;
+            line-height: 1.5;}
+    }
+}
 
 
