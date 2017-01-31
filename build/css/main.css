@@ -1,7 +1,7 @@
 .email-background .email-preheader, .email-background .email-container {
   max-width: 500px; }
 
-.email-background .email-container p {
+.email-background .email-container p, .email-background .email-container a {
   text-align: center; }
 
 .email-background {
@@ -22,3 +22,9 @@
       font-size: 18px;
       color: #666;
       line-height: 1.5; }
+    .email-background .email-container a {
+      display: block; }
+      .email-background .email-container a img {
+        display: inline-block;
+        max-width: 100%;
+        margin: 0 auto; }

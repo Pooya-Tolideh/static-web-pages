@@ -31,6 +31,16 @@ $main-margin: 20px;
             @extend %text_ctr;
             color: $par-color;
             line-height: 1.5;}
+
+        a {
+            display: block;
+            @extend %text_ctr;
+
+            img {
+                display: inline-block;
+                max-width: 100%;
+                margin: 0 auto;}
+        }
     }
 }
 
