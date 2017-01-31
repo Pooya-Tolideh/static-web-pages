@@ -1,6 +1,8 @@
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
     imagemin = require('gulp-imagemin'),
+    prefix = require('autoprefixer'),
+    postcss = require('gulp-postcss'),
     livereload = require('gulp-livereload');
 
 
@@ -14,7 +16,8 @@ function errorLog(error) {
 gulp.task('styles', function(){
     return gulp
     .src('./scss/main.scss')
-    .pipe(sass({outputStyle: 'nested'}).on('error', errorLog))
+    .pipe(sass({outputStyle: 'expanded'}).on('error', errorLog))
+    .pipe(postcss([ prefix({ browsers: ["> 0%"] }) ]))
     .pipe(gulp.dest('./build/css/'))
     .pipe(livereload());
 });
