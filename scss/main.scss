@@ -1,3 +1,67 @@
-* {
-    box-sizing: border-box;
+$basic-background: #eee;
+$nutral-color: #FFF;
+$par-color: #666;
+$btn-color: #3D87F5;
+$main-margin: 20px;
+
+%container_width { max-width: 400px; }
+%text_ctr{ text-align: center; }
+
+.email-background {
+    background: $basic-background;
+    padding: 10px;
+
+    .email-preheader {
+        @extend %container_width;
+        background: $basic-background;
+        color: $basic-background;
+        font-size: 5px; }
+
+    .email-container {
+        @extend %container_width;
+        background: $nutral-color;
+        font-family: sans-serif;
+        margin: 0 auto;
+        overflow: hidden;
+        border-radius: 5px;
+
+        h1 {
+            @extend %text_ctr;
+            color: $par-color * 0.75 ;
+            font-size: 30px;
+            padding: 5px;}
+
+
+        p {
+            margin: $main-margin;
+            font-size: 16px;
+            @extend %text_ctr;
+            color: $par-color;
+            line-height: 1.5; }
+
+        a {
+            display: block;
+            @extend %text_ctr;
+
+            img {
+                display: inline-block;
+                max-width: 100%;
+                margin: 0 auto; }
+        }
+
+        .cta {
+            @extend %text_ctr;
+            margin: $main-margin;
+
+            a {
+                text-decoration: none;
+                background: $btn-color;
+                padding: 10px 20px;
+                display: inline-block;
+                color: $nutral-color;
+                border-radius: 5px; }
+        }
+    }
 }
+
+
