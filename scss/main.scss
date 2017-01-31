@@ -5,7 +5,7 @@ $btn-color: #3D87F5;
 $main-margin: 20px;
 
 %container_width { max-width: 500px; }
-%text_ctr{ text-align: center;}
+%text_ctr{ text-align: center; }
 
 .email-background {
     background: $basic-background;
@@ -15,7 +15,7 @@ $main-margin: 20px;
         @extend %container_width;
         background: $basic-background;
         color: $basic-background;
-        font-size: 5px;}
+        font-size: 5px; }
 
     .email-container {
         @extend %container_width;
@@ -30,7 +30,7 @@ $main-margin: 20px;
             font-size: 18px;
             @extend %text_ctr;
             color: $par-color;
-            line-height: 1.5;}
+            line-height: 1.5; }
 
         a {
             display: block;
@@ -39,7 +39,20 @@ $main-margin: 20px;
             img {
                 display: inline-block;
                 max-width: 100%;
-                margin: 0 auto;}
+                margin: 0 auto; }
+        }
+
+        .cta {
+            @extend %text_ctr;
+            margin: $main-margin;
+
+            a {
+                text-decoration: none;
+                background: $btn-color;
+                padding: 10px 20px;
+                display: inline-block;
+                color: $nutral-color;
+                border-radius: 5px; }
         }
     }
 }
