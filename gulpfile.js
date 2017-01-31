@@ -1,5 +1,6 @@
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
+    imagemin = require('gulp-imagemin'),
     livereload = require('gulp-livereload');
 
 
@@ -14,7 +15,7 @@ gulp.task('styles', function(){
     return gulp
     .src('./scss/main.scss')
     .pipe(sass({outputStyle: 'expanded'}).on('error', errorLog))
-    .pipe(gulp.dest('./css/'))
+    .pipe(gulp.dest('./build/css/'))
     .pipe(livereload());
 });
 
@@ -23,6 +24,16 @@ gulp.task('updates', function(){
     gulp.src('./*.html')
     .pipe(livereload());
 });
+
+
+gulp.task('image', function(){
+    gulp.src('./img/**/*')
+    .on('error', errorLog)
+    .pipe(imagemin())
+    .pipe(gulp.dest('./build/img/'));
+
+});
+
 
 
 gulp.task('watch', function(){
