@@ -14,7 +14,7 @@ function errorLog(error) {
 gulp.task('styles', function(){
     return gulp
     .src('./scss/main.scss')
-    .pipe(sass({outputStyle: 'expanded'}).on('error', errorLog))
+    .pipe(sass({outputStyle: 'nested'}).on('error', errorLog))
     .pipe(gulp.dest('./build/css/'))
     .pipe(livereload());
 });

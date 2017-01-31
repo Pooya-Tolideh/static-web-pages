@@ -1,3 +1,20 @@
-* {
-    box-sizing: border-box;
+$basic-background: #eee;
+$nutral-color: #FFF;
+$par-color: #666;
+$btn-color: #3D87F5;
+$main-margin: 20px;
+
+.email-background {
+    background: $basic-background;
+    padding: 10px;
+
+    .email-preheader {
+        @extend %container_width;
+        background: $basic-background;
+        color: $basic-background;
+        font-size: 5px;}
+
 }
+
+
+

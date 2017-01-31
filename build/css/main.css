@@ -1,3 +1,10 @@
-* {
-  box-sizing: border-box;
-}
+.email-background .email-preheader {
+  max-width: 500px; }
+
+.email-background {
+  background: #eee;
+  padding: 10px; }
+  .email-background .email-preheader {
+    background: #eee;
+    color: #eee;
+    font-size: 5px; }
