@@ -1,0 +1,15 @@
+.split-jumbo {
+    display: flex;
+    flex-flow: row-reverse wrap;
+    justify-content: space-between;
+}
+
+.split-jumbo__content,
+.split-jumbo__media-box{
+    margin: 0;
+}
+
+.split-jumbo__image {
+    max-width: 100%;
+}
+
