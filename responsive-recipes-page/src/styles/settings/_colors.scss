@@ -22,7 +22,7 @@ $color-lime: #01FF70 !default;
 
 // Warm
 $color-yellow: #f7BA45 !default;    //*
-$color-orange: #FF851B !default;
+$color-orange: #e45a50 !default;
 $color-red:    #F03C69 !default;    //*
 $color-fuchsia: #F012BE !default;
 $color-purple: #9B4DCA !default;    //*
@@ -52,7 +52,7 @@ $color-tint-lighter: $color-tint * 2 !default;
 
 // Global
 $initial-color: $color-white !default;
-$primary-color: $color-blue !default;
+$primary-color: $color-orange !default;
 $secondary-color: $color-darkgray !default;
 
 // Text
@@ -64,7 +64,7 @@ $link-color: $color-blue !default;
 $link-hover-color: $color-red !default;
 
 // Buttons
-$button-primary-color: $color-blue !default;
+$button-primary-color: $color-orange !default;
 $button-primary-text-color: $color-white !default;
 $button-secondary-color: $color-darkgray !default;
 $button-secondary-text-color: $color-white !default;
@@ -73,7 +73,7 @@ $button-secondary-text-color: $color-white !default;
 $error-color: $color-red !default;
 $success-color: $color-green !default;
 $warning-color: $color-yellow !default;
-$focus-color: $color-blue !default;
+$focus-color: $color-aqua !default;
 
 // Extra
 $color-inverted: $color-white !default;
