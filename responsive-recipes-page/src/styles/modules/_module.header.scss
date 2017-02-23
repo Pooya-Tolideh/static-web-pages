@@ -1,0 +1,37 @@
+.hero {
+    background-image: url("./../images/hero.jpg");
+}
+
+.hero__content {
+    text-align: center;
+    padding: 5rem 0;
+    opacity: 0.8;
+}
+
+.hero__title-secondary {
+    font-family: Times New Roman, serif;
+    font-style: italic;
+    font-size: 2rem;
+    color: $initial-color;
+
+}
+
+.hero__title-primary {
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    color: $initial-color;
+}
+
+.hero__title-sub {
+    font-variant: uppercase;
+    color: $initial-color;
+}
+
+.button--hero {
+    border-color: $initial-color;
+    color: $initial-color;
+
+    &:hover {
+        background: rgba($initial-color, 0.7);
+    }
+}
