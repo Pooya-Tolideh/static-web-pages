@@ -1,7 +1,6 @@
 var path = require('path'),
     gulp = require('gulp'),
     del = require('del'),
-    glob = require('gulp-sass-glob'),
     runSequence = require('run-sequence'),
     browserSync = require('browser-sync'),
     gulpLoadPlugins = require('gulp-load-plugins'),
@@ -33,11 +32,9 @@ gulp.task('styles', function(){
   ];
 
   return gulp.src([
-    'app/styles/**/*.css',
-    'app/styles/**/*.scss'
+    'src/styles/**/*.css',
+    'src/styles/**/*.scss'
   ])
-    // Glob
-    .pipe($.if('*.scss', glob()))
     // checks only for changed files
     .pipe($.newer('.tmp/styles'))
     //debugging compressed files
@@ -69,9 +66,9 @@ gulp.task('scripts', function(){
       // Note: Since we are not using useref in the scripts build pipeline,
       //       you need to explicitly list your scripts here in the right order
       //       to be correctly concatenated
-      './app/scripts/main.js',
-      './app/scripts/vendor/html5-3.6-respond-1.4.2.min.js',
-      './app/scripts/vendor/jquery-1.11.2.min.js'
+      './src/scripts/main.js',
+      './src/scripts/vendor/html5-3.6-respond-1.4.2.min.js',
+      './src/scripts/vendor/jquery-1.11.2.min.js'
       // Other scripts
     ])
       .pipe($.newer('.tmp/scripts'))
@@ -104,14 +101,14 @@ gulp.task('serve', ['scripts', 'styles'], function(){
     // Note: this uses an unsigned certificate which on first access
     //       will present a certificate warning in the browser.
     // https: true,
-    server: ['.tmp', 'app'],
+    server: ['.tmp', 'src'],
     port: 3000
   });
 
-  gulp.watch(['app/**/*.html'], reload);
-  gulp.watch(['app/styles/**/*.{scss,css}'], ['styles', reload]);
-  gulp.watch(['app/scripts/**/*.js'], ['lint', 'scripts', reload]);
-  gulp.watch(['app/images/**/*'], reload);
+  gulp.watch(['src/**/*.html'], reload);
+  gulp.watch(['src/styles/**/*.{scss,css}'], ['styles', reload]);
+  gulp.watch(['src/scripts/**/*.js'], ['lint', 'scripts', reload]);
+  gulp.watch(['src/images/**/*'], reload);
 });
 
 
@@ -130,7 +127,7 @@ gulp.task('clean', function(){ del(['.tmp', 'dist/*', '!dist/.git'], {dot: true}
 
 // Lint JavaScript
 gulp.task('lint', function(){
-  gulp.src(['app/scripts/**/*.js','!node_modules/**'])
+  gulp.src(['src/scripts/**/*.js','!node_modules/**'])
     .pipe($.eslint())
     .pipe($.eslint.format())
     .pipe($.if(!browserSync.active, $.eslint.failAfterError()))
@@ -141,7 +138,7 @@ gulp.task('lint', function(){
 //IMAGES
 // Optimize images
 gulp.task('images', function(){
-  gulp.src('app/images/**/*')
+  gulp.src('src/images/**/*')
     .pipe($.cache($.imagemin({
       progressive: true,
       interlaced: true
@@ -155,9 +152,9 @@ gulp.task('images', function(){
 //HTML
 // Scan your HTML for assets & optimize them
 gulp.task('html', function(){
-  return gulp.src('app/**/*.html')
+  return gulp.src('src/**/*.html')
     .pipe($.useref({
-      searchPath: '{.tmp,app}',
+      searchPath: '{.tmp,src}',
       noAssets: true
     }))
 
@@ -184,8 +181,8 @@ gulp.task('html', function(){
 // Copy all files at the root level (app)
 gulp.task('copy', function(){
   gulp.src([
-    'app/*',
-    '!app/*.html',
+    'src/*',
+    '!src/*.html',
     'node_modules/apache-server-configs/dist/.htaccess'
   ], {
     dot: true
