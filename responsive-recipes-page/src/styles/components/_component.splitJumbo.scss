@@ -9,6 +9,12 @@
     margin: 0;
 }
 
+.split-jumbo__content {
+    @media all and (min-width: 68rem) {
+        padding: 0 $padding-xlarge;
+    }
+}
+
 .split-jumbo__image {
     max-width: 100%;
 }
