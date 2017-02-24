@@ -1,0 +1,13 @@
+.stat-tile {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 100%;
+    padding: $padding-large 0;
+
+}
+
+.stat-tile__num {
+    font-size: 2.2rem;
+    font-weight: bold;
+}

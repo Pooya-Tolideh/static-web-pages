@@ -20,8 +20,16 @@
     border-top: 1px solid $primary-color;
 }
 
+
+/*
+ * 1. remove padding when placed in stat-tile cmp
+ */
 .text-box {
     color: $text-color;
     padding-top: $padding-small;
 
+    /*1*/
+    .stat-tile & {
+        padding-top: 0;
+    }
 }
