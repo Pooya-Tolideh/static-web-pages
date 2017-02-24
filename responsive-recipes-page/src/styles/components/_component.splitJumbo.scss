@@ -1,7 +1,8 @@
 .split-jumbo {
     display: flex;
-    flex-flow: row-reverse wrap;
-    justify-content: space-between;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .split-jumbo__content,
@@ -10,12 +11,28 @@
 }
 
 .split-jumbo__content {
-    @media all and (min-width: 68rem) {
-        padding: 0 $padding-xlarge;
+
+    /*app intro content box*/
+    @media all and (min-width: 550px) {
+        width: 80%;
     }
 }
 
+.split-jumbo__media-box {
+    text-align: center;
+}
+
+
 .split-jumbo__image {
     max-width: 100%;
+
+    /* app-intro splitjumbo image */
+    @media all and (min-width: 550px) {
+        .app-intro & {
+            max-width: 400px;
+            margin: 0 auto;
+            display: inline-block;
+        }
+    }
 }
 
