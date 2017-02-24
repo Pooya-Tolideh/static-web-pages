@@ -1,5 +1,11 @@
 .decore-heading {
     text-align: center;
+
+    @media all and (min-width: 960px) {
+        .app-intro & {
+            text-align: left;
+        }
+    }
 }
 
 
