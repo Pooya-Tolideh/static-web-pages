@@ -4,6 +4,13 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    padding: $padding-medium 0;
+    padding: $padding-xlarge 0;
+    text-decoration: none;
+    text-align: center;
+}
+
+.image-tile__title {
+    color: $initial-color;
+    font-size: 1.8rem;
 }
 
