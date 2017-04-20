@@ -1,0 +1,10 @@
+fudi-app_landing-page/node_modules/
+fudi-app_landing-page/misc/
+fudi-app_landing-page/assets/
+designer-clothing_web-store/node_modules/
+designer-clothing_web-store/assets/
+designer-clothing_web-store/.tmp/
+*/**/node_modules/
+*/**/.tmp/
+
+
