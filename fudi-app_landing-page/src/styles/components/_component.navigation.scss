@@ -1,0 +1,35 @@
+.top-nav {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    // max-width: 1200px;
+    // margin: 0 auto;
+}
+
+.top-nav__menu {
+    margin-bottom: 0;
+}
+
+.top-nav__logo {
+    width: 8%;
+    min-width: 60px;
+    max-width: 80px;
+    height: auto;
+}
+
+.top-nav__menu-item {
+    float: left;
+    margin-left: 2rem;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.top-nav__menu-link {
+    list-style: none;
+    font-size: $base-font-size - 0.2;
+    color: $initial-color;
+    text-decoration: none;
+    cursor: pointer;
+}

@@ -1,0 +1,11 @@
+.footer {
+    background: $color-aluminum;
+    padding: $padding-medium 0;
+    text-align: center;
+    border-top: 1px solid $color-gray;
+}
+
+.footer__sub-text {
+    display: inline-block;
+    color: $color-gray;
+}

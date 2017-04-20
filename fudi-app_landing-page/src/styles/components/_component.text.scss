@@ -1,0 +1,35 @@
+.decore-heading {
+    text-align: center;
+
+    @media all and (min-width: 960px) {
+        .app-intro & {
+            text-align: left;
+        }
+    }
+}
+
+
+.decore-heading__title {
+    font-weight: bold;
+    margin-bottom: -1.2rem;
+}
+
+.decore-heading__title-underline {
+    display: inline-block;
+    width: 8rem;
+    border-top: 1px solid $primary-color;
+}
+
+
+/*
+ * 1. remove padding when placed in stat-tile cmp
+ */
+.text-box {
+    color: $text-color;
+    padding-top: $padding-small;
+
+    /*1*/
+    .stat-tile & {
+        padding-top: 0;
+    }
+}

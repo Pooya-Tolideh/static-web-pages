@@ -1,0 +1,18 @@
+.review-card__thumbnail {
+    width: 60px;
+
+    @media all and (min-width: 550px){
+        width: 80px;
+    }
+}
+
+.review-card__review,
+.review-card__meta {
+    color: rgba($initial-color, 0.7);
+}
+
+.review-card__review {
+    padding-top: $padding-small;
+    font-size: 1.8rem;
+}
+

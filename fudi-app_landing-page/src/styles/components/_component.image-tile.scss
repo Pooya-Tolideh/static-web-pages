@@ -1,0 +1,16 @@
+.image-tile {
+    display: inline-block;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: $padding-xlarge 0;
+    text-decoration: none;
+    text-align: center;
+}
+
+.image-tile__title {
+    color: $initial-color;
+    font-size: 2.2rem;
+}
+

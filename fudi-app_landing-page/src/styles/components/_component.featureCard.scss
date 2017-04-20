@@ -1,0 +1,13 @@
+
+.feature-card{
+    text-align: center;
+    padding: $padding-small 0;
+
+    // @media all and min-width()
+}
+
+.feature-card__thumbnail {
+    width: 7rem;
+    height: auto;
+    padding-bottom: 1.2rem;
+}
