@@ -1,0 +1,105 @@
+.email-background .email-preheader, .email-background .email-container, .email-background .footer {
+  max-width: 400px;
+}
+
+.email-background .email-container h1, .email-background .footer h1, .email-background .email-container p, .email-background .footer p, .email-background .email-container a, .email-background .footer a, .email-background .email-container .cta, .email-background .footer .cta, .email-background .footer {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.email-background {
+  background: #eee;
+  padding: 10px;
+}
+
+.email-background .email-preheader {
+  background: #eee;
+  color: #eee;
+  font-size: 5px;
+}
+
+.email-background .email-container, .email-background .footer {
+  background: #FFF;
+  font-family: sans-serif;
+  margin: 0 auto;
+  overflow: hidden;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+}
+
+.email-background .email-container h1, .email-background .footer h1 {
+  color: #4d4d4d;
+  font-size: 30px;
+  padding: 5px;
+}
+
+.email-background .email-container p, .email-background .footer p {
+  margin: 20px;
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.email-background .email-container a, .email-background .footer a {
+  display: block;
+}
+
+.email-background .email-container a img, .email-background .footer a img {
+  display: inline-block;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.email-background .email-container .cta, .email-background .footer .cta {
+  margin: 20px;
+}
+
+.email-background .email-container .cta a, .email-background .footer .cta a {
+  background: #3D87F5;
+  padding: 10px 20px;
+  display: inline-block;
+  color: #FFF;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+}
+
+.email-background .footer {
+  background: #eee;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding-left: 0;
+}
+
+.email-background .footer li {
+  display: inline-block;
+  padding: 0 20px;
+  border-left: 1px solid #7a7a7a;
+}
+
+.email-background .footer li a {
+  color: #adadad;
+  font-size: 12px;
+}
+
+.email-background .footer li a:hover {
+  text-decoration: underline;
+}
+
+.email-background .footer li:first-child {
+  border-left: none;
+}

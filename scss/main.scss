@@ -1,0 +1,96 @@
+$basic-background: #eee;
+$nutral-color: #FFF;
+$par-color: #666;
+$btn-color: #3D87F5;
+$main-margin: 20px;
+
+%container_width { max-width: 400px; }
+%text_ctr{ text-align: center; }
+
+
+a { text-decoration: none; }
+li { list-style: none; }
+* { box-sizing: border-box; }
+
+.email-background {
+    background: $basic-background;
+    padding: 10px;
+
+    .email-preheader {
+        @extend %container_width;
+        background: $basic-background;
+        color: $basic-background;
+        font-size: 5px; }
+
+    .email-container {
+        @extend %container_width;
+        background: $nutral-color;
+        font-family: sans-serif;
+        margin: 0 auto;
+        overflow: hidden;
+        border-radius: 5px;
+
+        h1 {
+            @extend %text_ctr;
+            color: $par-color * 0.75 ;
+            font-size: 30px;
+            padding: 5px;}
+
+
+        p {
+            margin: $main-margin;
+            font-size: 16px;
+            @extend %text_ctr;
+            color: $par-color;
+            line-height: 1.5; }
+
+        a {
+            display: block;
+            @extend %text_ctr;
+
+            img {
+                display: inline-block;
+                max-width: 100%;
+                margin: 0 auto; }
+        }
+
+        .cta {
+            @extend %text_ctr;
+            margin: $main-margin;
+
+            a {
+                background: $btn-color;
+                padding: 10px 20px;
+                display: inline-block;
+                color: $nutral-color;
+                border-radius: 5px; }
+        }
+    }
+
+    .footer {
+        @extend .email-container;
+        @extend %text_ctr;
+        background: $basic-background;
+        margin-top: $main-margin;
+        margin-bottom: $main-margin/2;
+        padding-left: 0;
+
+        li {
+            display: inline-block;
+            padding: 0 $main-margin;
+            border-left: 1px solid $par-color*1.2;
+
+            a {
+                color: $par-color*1.7;
+                font-size: 12px;
+
+                &:hover {text-decoration: underline;}
+            }
+
+        }
+
+        li:first-child { border-left: none;}
+    }
+}
+
+
