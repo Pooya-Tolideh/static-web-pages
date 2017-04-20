@@ -107,7 +107,7 @@ gulp.task('serve', ['scripts', 'styles'], function(){
 
   gulp.watch(['src/**/*.html'], reload);
   gulp.watch(['src/styles/**/*.{scss,css}'], ['styles', reload]);
-  gulp.watch(['src/scripts/**/*.js'], ['lint', 'scripts', reload]);
+  gulp.watch(['src/scripts/**/*.js'], [/*'lint',*/ 'scripts', reload]);
   gulp.watch(['src/images/**/*'], reload);
 });
 
@@ -197,7 +197,7 @@ gulp.task('copy', function(){
 gulp.task('default', ['clean'], function(cb) {
   runSequence(
     'styles',
-    ['lint', 'html', 'scripts', 'images', 'copy'],
+    [/*'lint',*/ 'html', 'scripts', 'images', 'copy'],
     cb
   )
 });
